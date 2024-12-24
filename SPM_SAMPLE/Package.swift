@@ -12,7 +12,7 @@ let package = Package(
             targets: ["SPM_SAMPLE"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Pushwoosh/Pushwoosh-XCFramework.git", exact: "6.7.9"),
+        .package(url: "https://github.com/Pushwoosh/Pushwoosh-XCFramework.git", exact: "6.7.11"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

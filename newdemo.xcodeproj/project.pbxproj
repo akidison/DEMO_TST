@@ -399,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\n# Путь к локальному проекту\nLOCAL_PROJECT_PATH=\"../../Pushwoosh/Pushwoosh.xcodeproj\"\n\n# Проверяем, существует ли локальный проект\nif [ -d \"$LOCAL_PROJECT_PATH\" ]; then\n    echo \"Using local Pushwoosh project: $LOCAL_PROJECT_PATH\"\n    # Здесь можно добавить любые действия, если нужно обработать локальный проект\nelse\n    echo \"Error: Local Pushwoosh project not found at $LOCAL_PROJECT_PATH\"\n    exit 1\nfi\n";
+			shellScript = "#!/bin/bash\n\nLOCAL_PROJECT_PATH=\"../../Pushwoosh/Pushwoosh.xcodeproj\"\nPACKAGE_SWIFT_PATH=\"SPM_SAMPLE/Package.swift\"\n\nif [ -d \"$LOCAL_PROJECT_PATH\" ]; then\n    echo \"Using local Pushwoosh project: $LOCAL_PROJECT_PATH\"\nelse\n    echo \"Using SPM dependency for Pushwoosh\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
