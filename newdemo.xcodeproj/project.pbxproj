@@ -24,6 +24,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		44DE44F52D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Pushwoosh.ios;
+		};
+		44DE44F72D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 467EB9371DFEC23A00506823;
+			remoteInfo = PushwooshiOS;
+		};
+		44DE44F92D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C42A20691D06CBB800CC3BCB;
+			remoteInfo = Pushwoosh.mac;
+		};
+		44DE44FB2D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 467F61F21EB87F3300548315;
+			remoteInfo = PushwooshMac;
+		};
+		44DE44FD2D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DA6EBC722E18CAD00097C50;
+			remoteInfo = Pushwoosh.watchOS;
+		};
+		44DE44FF2D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D4496BF22F01C6B00BD62F4;
+			remoteInfo = Pushwoosh.watchOS.dynamic;
+		};
+		44DE45012D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46FA9E341C7DB1AA00741A11;
+			remoteInfo = PushwooshTests;
+		};
+		44DE45032D1B0EAC00D4DD97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 449CC00B2BA9C289003E16DC;
+			remoteInfo = PushwooshVisionOS;
+		};
 		44EDFF082BC98BB200ED242F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 44556FCB2BC96D6000E92413 /* Project object */;
@@ -86,6 +142,7 @@
 		440E52A32CE39B18006555DD /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		443384212C0E0A2500C476DD /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		44556FD32BC96D6000E92413 /* newdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pushwoosh.xcodeproj; path = ../iOS/Pushwoosh/Pushwoosh.xcodeproj; sourceTree = SOURCE_ROOT; };
 		44EDFF032BC98BB200ED242F /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDFF1D2BCDA0CE00ED242F /* newdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDFF1F2BCDA0CE00ED242F /* AppDelegateIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateIntegration.swift; sourceTree = "<group>"; };
@@ -174,6 +231,7 @@
 		443383FD2C0E037F00C476DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,6 +255,21 @@
 				44EDFF032BC98BB200ED242F /* NotificationService.appex */,
 				44EDFF1D2BCDA0CE00ED242F /* newdemoTests.xctest */,
 				44EDFF2C2BCDA55500ED242F /* newdemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44DE44E82D1B0EAC00D4DD97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44DE44F62D1B0EAC00D4DD97 /* libPushwoosh.a */,
+				44DE44F82D1B0EAC00D4DD97 /* PushwooshFramework.framework */,
+				44DE44FA2D1B0EAC00D4DD97 /* libPushwoosh.a */,
+				44DE44FC2D1B0EAC00D4DD97 /* Pushwoosh.framework */,
+				44DE44FE2D1B0EAC00D4DD97 /* libPushwoosh.watchOS.a */,
+				44DE45002D1B0EAC00D4DD97 /* Pushwoosh.framework */,
+				44DE45022D1B0EAC00D4DD97 /* PushwooshTests.xctest */,
+				44DE45042D1B0EAC00D4DD97 /* Pushwoosh.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +415,12 @@
 			);
 			productRefGroup = 44556FD42BC96D6000E92413 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 44DE44E82D1B0EAC00D4DD97 /* Products */;
+					ProjectRef = 44DE44E52D1B0EAC00D4DD97 /* Pushwoosh.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				44556FD22BC96D6000E92413 /* newdemo */,
@@ -351,6 +430,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		44DE44F62D1B0EAC00D4DD97 /* libPushwoosh.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPushwoosh.a;
+			remoteRef = 44DE44F52D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE44F82D1B0EAC00D4DD97 /* PushwooshFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PushwooshFramework.framework;
+			remoteRef = 44DE44F72D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE44FA2D1B0EAC00D4DD97 /* libPushwoosh.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPushwoosh.a;
+			remoteRef = 44DE44F92D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE44FC2D1B0EAC00D4DD97 /* Pushwoosh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pushwoosh.framework;
+			remoteRef = 44DE44FB2D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE44FE2D1B0EAC00D4DD97 /* libPushwoosh.watchOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPushwoosh.watchOS.a;
+			remoteRef = 44DE44FD2D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE45002D1B0EAC00D4DD97 /* Pushwoosh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pushwoosh.framework;
+			remoteRef = 44DE44FF2D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE45022D1B0EAC00D4DD97 /* PushwooshTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PushwooshTests.xctest;
+			remoteRef = 44DE45012D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44DE45042D1B0EAC00D4DD97 /* Pushwoosh.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pushwoosh.framework;
+			remoteRef = 44DE45032D1B0EAC00D4DD97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		44556FD12BC96D6000E92413 /* Resources */ = {
