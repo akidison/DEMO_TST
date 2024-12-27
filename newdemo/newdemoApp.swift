@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-import PushwooshFramework
+import Pushwoosh
+import UserNotifications
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate, PWMessagingDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         Pushwoosh.sharedInstance().delegate = self
-                
+
         return true
     }
     

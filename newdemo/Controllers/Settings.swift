@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import PushwooshFramework
+import Pushwoosh
 
 struct Settings: View {
     @State private var pushNotificationEnabled = false

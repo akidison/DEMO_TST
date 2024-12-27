@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import PushwooshFramework
+import Pushwoosh
 
 struct Actions: View {
     @State private var textInputKey: String = ""
