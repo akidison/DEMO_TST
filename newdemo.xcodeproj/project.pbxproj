@@ -16,7 +16,9 @@
 		443384222C0E0A2500C476DD /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443384212C0E0A2500C476DD /* SettingsTests.swift */; };
 		44CBC2A72D1EDABF0099D5FF /* PushwooshFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBC29A2D1EDA7F0099D5FF /* PushwooshFramework.framework */; };
 		44CBC2A82D1EDABF0099D5FF /* PushwooshFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBC29A2D1EDA7F0099D5FF /* PushwooshFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		44CBC2AA2D1EDAC20099D5FF /* PushwooshDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 44CBC2A92D1EDAC20099D5FF /* PushwooshDependency */; };
+		44CBC2C42D1EF8410099D5FF /* PushwooshFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBC29A2D1EDA7F0099D5FF /* PushwooshFramework.framework */; };
+		44CBC2C52D1EF8410099D5FF /* PushwooshFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44CBC29A2D1EDA7F0099D5FF /* PushwooshFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44CBC2C82D1EF8970099D5FF /* PushwooshFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 44CBC2C72D1EF8970099D5FF /* PushwooshFramework */; };
 		44EDFF0A2BC98BB200ED242F /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 44EDFF032BC98BB200ED242F /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44EDFF202BCDA0CE00ED242F /* AppDelegateIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDFF1F2BCDA0CE00ED242F /* AppDelegateIntegration.swift */; };
 		44EDFF272BCDA35800ED242F /* NotificationsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDFF262BCDA35800ED242F /* NotificationsTest.swift */; };
@@ -111,6 +113,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				44CBC2C52D1EF8410099D5FF /* PushwooshFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CBC2AA2D1EDAC20099D5FF /* PushwooshDependency in Frameworks */,
+				44CBC2C82D1EF8970099D5FF /* PushwooshFramework in Frameworks */,
 				44CBC2A72D1EDABF0099D5FF /* PushwooshFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44CBC2C42D1EF8410099D5FF /* PushwooshFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +330,7 @@
 			);
 			name = newdemo;
 			packageProductDependencies = (
-				44CBC2A92D1EDAC20099D5FF /* PushwooshDependency */,
+				44CBC2C72D1EF8970099D5FF /* PushwooshFramework */,
 			);
 			productName = newdemo;
 			productReference = 44556FD32BC96D6000E92413 /* newdemo.app */;
@@ -424,6 +428,7 @@
 			);
 			mainGroup = 44556FCA2BC96D6000E92413;
 			packageReferences = (
+				44CBC2C62D1EF8970099D5FF /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */,
 			);
 			productRefGroup = 44556FD42BC96D6000E92413 /* Products */;
 			projectDirPath = "";
@@ -549,7 +554,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\nLOCAL_PROJECT_PATH=\"../../Pushwoosh/Pushwoosh.xcodeproj\"\nPACKAGE_SWIFT_PATH=\"PushwooshDependencies/Package.swift\"\n\nif [ -d \"$LOCAL_PROJECT_PATH\" ]; then\n    echo \"Using local Pushwoosh project: $LOCAL_PROJECT_PATH\"\n    \n    # Путь к файлу project.pbxproj\n    PBXPROJ_PATH=\"$LOCAL_PROJECT_PATH/project.pbxproj\"\n    \n    # Проверка существования файла project.pbxproj\n    if [ -f \"$PBXPROJ_PATH\" ]; then\n        echo \"Found project.pbxproj at $PBXPROJ_PATH\"\n        \n        # Создание резервной копии файла project.pbxproj\n        cp \"$PBXPROJ_PATH\" \"$PBXPROJ_PATH.bak\"\n        echo \"Backup created: $PBXPROJ_PATH.bak\"\n        \n        # Удаление фреймворка PushwooshFramework.framework из секции Link Binary with Libraries\n        sed -i '' '/PushwooshFramework.framework/d' \"$PBXPROJ_PATH\"\n        echo \"PushwooshFramework.framework removed from Link Binary with Libraries\"\n    else\n        echo \"Error: project.pbxproj not found at $PBXPROJ_PATH\"\n        exit 1\n    fi\nelse\n    echo \"Using SPM dependency for Pushwoosh\"\nfi\n";
+			shellScript = "#!/bin/bash\n\nLOCAL_PROJECT_PATH=\"../../Pushwoosh/Pushwoosh.xcodeproj\"\nPACKAGE_SWIFT_PATH=\"PushwooshDependencies/Package.swift\"\n\nif [ -d \"$LOCAL_PROJECT_PATH\" ]; then\n    echo \"Using local Pushwoosh project: $LOCAL_PROJECT_PATH\"\n\nelse\n    echo \"Using SPM dependency for Pushwoosh\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -985,10 +990,22 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		44CBC2C62D1EF8970099D5FF /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Pushwoosh/Pushwoosh-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		44CBC2A92D1EDAC20099D5FF /* PushwooshDependency */ = {
+		44CBC2C72D1EF8970099D5FF /* PushwooshFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = PushwooshDependency;
+			package = 44CBC2C62D1EF8970099D5FF /* XCRemoteSwiftPackageReference "Pushwoosh-XCFramework" */;
+			productName = PushwooshFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
